@@ -5,13 +5,13 @@
 class Uictl < Formula
   desc "CLI for managing UniFi network devices and controllers — built for humans and LLM agents"
   homepage "https://github.com/kfriede/uictl"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kfriede/uictl/releases/download/v0.1.0/uictl_0.1.0_darwin_amd64.tar.gz"
-      sha256 "800fdb6317a7dcbd6fba2ffc44744e7c3c1cee15d4de97b3ffb06d3066429b64"
+      url "https://github.com/kfriede/uictl/releases/download/v0.2.0/uictl_0.2.0_darwin_amd64.tar.gz"
+      sha256 "09b42763f312b647e4865a3f76ea8fbacba68dfbb8ee4a326ec0b26540b471fa"
 
       define_method(:install) do
         bin.install "uictl"
@@ -19,8 +19,8 @@ class Uictl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kfriede/uictl/releases/download/v0.1.0/uictl_0.1.0_darwin_arm64.tar.gz"
-      sha256 "90684fef144fac3cb73d905d9b5d8de20977b4617a2b5cfc8746d0f931a322ed"
+      url "https://github.com/kfriede/uictl/releases/download/v0.2.0/uictl_0.2.0_darwin_arm64.tar.gz"
+      sha256 "b868a8a98e04ebaa0f321a5301f4eb5a292bc314edcfa3337c355810195581fe"
 
       define_method(:install) do
         bin.install "uictl"
@@ -31,16 +31,16 @@ class Uictl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfriede/uictl/releases/download/v0.1.0/uictl_0.1.0_linux_amd64.tar.gz"
-      sha256 "06436fddc820729b3ef295fdc3ed613945b3a866781f2a406371baba36ae1406"
+      url "https://github.com/kfriede/uictl/releases/download/v0.2.0/uictl_0.2.0_linux_amd64.tar.gz"
+      sha256 "6c837f6185af08c20ad5293bdfe2b84d89a7071bd5205651d1401e020603becd"
       define_method(:install) do
         bin.install "uictl"
         generate_completions_from_executable(bin/"uictl", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfriede/uictl/releases/download/v0.1.0/uictl_0.1.0_linux_arm64.tar.gz"
-      sha256 "06724eb62b421c16746bea890a53803533b781b405f11263b3b64eaec41feb96"
+      url "https://github.com/kfriede/uictl/releases/download/v0.2.0/uictl_0.2.0_linux_arm64.tar.gz"
+      sha256 "9989fa737bb823f41ce00bb08a1144f101107484dbc99619c20cb5967942584f"
       define_method(:install) do
         bin.install "uictl"
         generate_completions_from_executable(bin/"uictl", "completion")
