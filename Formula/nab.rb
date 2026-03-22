@@ -11,7 +11,7 @@ class Nab < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kfriede/nab/releases/download/v0.2.0/nab_0.2.0_darwin_amd64.tar.gz"
-      sha256 "07229630a7a5bd42a7e53fdcc8b628ba17774312381fc9eed9554883d46b1bf0"
+      sha256 "c3db7ce97a25b556b1f1d5e900e12427dc107802ddafdc470a845dce195a05a0"
 
       define_method(:install) do
         bin.install "nab"
@@ -20,7 +20,7 @@ class Nab < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kfriede/nab/releases/download/v0.2.0/nab_0.2.0_darwin_arm64.tar.gz"
-      sha256 "3181175087cab25ba5ff95fe43d20631513835ac5817ac9276340e44345affb3"
+      sha256 "753bf449895c368f7d3c1b30682738b4c08e480cd515e5d063d329bfaecb3b2f"
 
       define_method(:install) do
         bin.install "nab"
@@ -32,7 +32,7 @@ class Nab < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kfriede/nab/releases/download/v0.2.0/nab_0.2.0_linux_amd64.tar.gz"
-      sha256 "d75ebc4b27258a5efba76abed88382314f1fe22d44972a3d0d883b9787775994"
+      sha256 "d2a3aa16258199298238370cdbfa70dc2fc3a34d881f69a2a13c14486571d7d6"
       define_method(:install) do
         bin.install "nab"
         generate_completions_from_executable(bin/"nab", "completion")
@@ -40,7 +40,7 @@ class Nab < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kfriede/nab/releases/download/v0.2.0/nab_0.2.0_linux_arm64.tar.gz"
-      sha256 "d0bf4ce2ad14a6f4b4fcfbcc312126557cfb534850aef4d311a358594605bdd9"
+      sha256 "cb2de6321f6b74471599227a5320839ed0d66bdde3db666c97cf307c4f621350"
       define_method(:install) do
         bin.install "nab"
         generate_completions_from_executable(bin/"nab", "completion")
