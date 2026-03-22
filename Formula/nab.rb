@@ -5,13 +5,13 @@
 class Nab < Formula
   desc "CLI for You Need A Budget (YNAB) — built for humans and LLM agents"
   homepage "https://github.com/kfriede/nab"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kfriede/nab/releases/download/v0.2.1/nab_0.2.1_darwin_amd64.tar.gz"
-      sha256 "a0a617646cdfcc3c26766c35c76eaba46c3db7b336ce9d97e879a6f2aefe6019"
+      url "https://github.com/kfriede/nab/releases/download/v0.2.2/nab_0.2.2_darwin_amd64.tar.gz"
+      sha256 "d2af2c683c136edb744db8bfc32b8ee0961b166f5ed7f2cf0019e19ec2ae0036"
 
       define_method(:install) do
         bin.install "nab"
@@ -19,8 +19,8 @@ class Nab < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kfriede/nab/releases/download/v0.2.1/nab_0.2.1_darwin_arm64.tar.gz"
-      sha256 "aab36d885aa478558fc03af2cf523a086472875047ef87bd56adf4225d970c1a"
+      url "https://github.com/kfriede/nab/releases/download/v0.2.2/nab_0.2.2_darwin_arm64.tar.gz"
+      sha256 "ca35e283cb7217ac536fbda1e540ed47195592d7b386e3d4eaf95f0693008eef"
 
       define_method(:install) do
         bin.install "nab"
@@ -31,16 +31,16 @@ class Nab < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfriede/nab/releases/download/v0.2.1/nab_0.2.1_linux_amd64.tar.gz"
-      sha256 "bc357ffc4fce7e7fb5c0a8c81b26f4752fbeb50f723ef4a0aa98a393d656ac01"
+      url "https://github.com/kfriede/nab/releases/download/v0.2.2/nab_0.2.2_linux_amd64.tar.gz"
+      sha256 "54d938dbc0685434e1a14db69be474b41cb545a4cc17433502ddd0a2c5296e24"
       define_method(:install) do
         bin.install "nab"
         generate_completions_from_executable(bin/"nab", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfriede/nab/releases/download/v0.2.1/nab_0.2.1_linux_arm64.tar.gz"
-      sha256 "0d482c9a4d8b379f6eb6a71badeb8b11797b6f97892a43a17395588c01d41fb3"
+      url "https://github.com/kfriede/nab/releases/download/v0.2.2/nab_0.2.2_linux_arm64.tar.gz"
+      sha256 "504ffebd4526055a7ef9fdd35719b76a0ef95489c7349e35c5afedd96f2b0c88"
       define_method(:install) do
         bin.install "nab"
         generate_completions_from_executable(bin/"nab", "completion")
